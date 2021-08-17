@@ -1,3 +1,7 @@
+h1, h3{
+    margin:0;
+}
+
 .container{
     display:flex;
     flex-direction: column;
@@ -5,7 +9,6 @@
 }
 
 header{
-    background-color: rosybrown;
     display:flex;
     flex-direction: row;
     border-bottom: 0.5px solid rgb(192, 192, 192);
@@ -64,6 +67,7 @@ header{
 }
 
 #main-container{
+    margin-left:120px;
     background-color: beige;
     flex-grow:1;
     column-width: 250px;

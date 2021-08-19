@@ -1,7 +1,36 @@
+:root{
+    --white-color:#f0f4f5; /* color:var(--white-color)로 사용 */
+    --background-Light:#ffffff;
+    --background-normal:#fafafa;
+    --backgorund-dark:#c7c7c7;
+    --point-normal:#00664f; /*이화그린*/
+    --point-light:#38786a;
+    --point-dark:#002419;
+}
+
+body{
+    margin:0px;
+}
+
 h1, h3{
     margin:0;
 }
-
+h1{
+    font-size:1.5rem;
+}
+h3{
+    font-size:0.8rem;
+}
+a {
+    text-decoration:none !important
+}
+h1 a[href]{
+    color: rgb(0, 70, 42);
+}
+ul{
+    list-style:none;
+    padding-left:0px;
+}
 .container{
     display:flex;
     flex-direction: column;
@@ -11,18 +40,51 @@ h1, h3{
 header{
     display:flex;
     flex-direction: row;
-    border-bottom: 0.5px solid rgb(192, 192, 192);
+    border-bottom: 0.5px solid rgb(155, 146, 146);
+    padding:5px 10px;
 }
 
 .header-group{
-    background-color: purple;
-    border:1px solid gray;
     flex-grow: 0;
 }
 
 #header-title{
-    background-color:powderblue;
     flex-grow:1;
+    flex-shrink: 0;
+}
+
+#header-btn-group, #search-form{
+    align-items: center;
+    display:flex;
+}
+
+#header-btn-group i:hover{
+    color:#38786a;
+}
+
+#search, #log-out{
+    padding: 8px 10px;
+}
+
+#search-form{
+    display: none;
+}
+
+#search-form.active{
+    display:flex;
+}
+
+.search-ok-btn{
+    background-color:#e5e5e5;
+    padding: 2px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.search-ok-btn:hover{
+    cursor: pointer;
+    background-color:#38786a;
+    color:white;
 }
 
 .middle{
@@ -38,12 +100,13 @@ header{
     flex-basis:150px;
     flex-shrink: 0;
     padding: 10px;
-    height:100%;
+    height:50%;
     text-align: center;
     z-index :1;
     background-color:whitesmoke;
     left :0;
-    position:fixed;
+    position:fixed;;
+    align-items: center;
 }
 
 .nav-btn a {
@@ -62,10 +125,6 @@ header{
     color:white;
 }
 
-#header-btn-group{
-    display:flex;
-}
-
 #main-container{
     margin-left:120px;
     background-color: beige;
@@ -81,4 +140,9 @@ header{
 
 .box-name{
     background-color: plum;
+}
+
+/*반응형*/
+@media screen and (max-width:768px) {
+    
 }

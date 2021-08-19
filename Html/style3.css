@@ -173,6 +173,21 @@ header{
     color:grey;
 }
 
+.btn-delete{
+    border-radius: 20px;
+    border:none;
+    padding: 0px;
+    background-color: var(--background-normal);
+}
+
+.btn-delete i{
+    color: var(--background-dark);
+}
+
+.btn-delete i:hover{
+    color: var(--point-normal);
+}
+
 #add-todo{
     right:10%;
     bottom: 10%;

@@ -1,15 +1,17 @@
 :root{
     --white-color:#f0f4f5; /* color:var(--white-color)로 사용 */
-    --background-Light:#ffffff;
+    --background-light:#ffffff;
     --background-normal:#fafafa;
-    --backgorund-dark:#c7c7c7;
-    --point-normal:#00664f; /*이화그린*/
+    --background-dark:#c7c7c7;
+    --point-normal:rgb(0, 70, 42); /*이화그린*/
     --point-light:#38786a;
     --point-dark:#002419;
+    --button:#e5e5e5;
 }
 
 body{
     margin:0px;
+    height: 100vh;
 }
 
 h1, h3{
@@ -34,7 +36,7 @@ ul{
 .container{
     display:flex;
     flex-direction: column;
-    background-color:rgb(243, 243, 243);
+    background-color: rgb(250, 250, 250);
 }
 
 header{
@@ -74,14 +76,14 @@ header{
     display:flex;
 }
 
-.search-ok-btn{
+.ok-btn{
     background-color:#e5e5e5;
     padding: 2px;
     margin-left: 5px;
     border-radius: 4px;
 }
 
-.search-ok-btn:hover{
+.ok-btn:hover{
     cursor: pointer;
     background-color:#38786a;
     color:white;
@@ -89,6 +91,7 @@ header{
 
 .middle{
     display:flex;
+    height:100vh;
 }
 
 .middle-group{
@@ -107,9 +110,10 @@ header{
     left :0;
     position:fixed;;
     align-items: center;
+    min-width: 103px;
 }
 
-.nav-btn a {
+.nav-btn a, .add-nav-btn {
     padding: 15px;
     margin-top: 7px;
     text-decoration: none;
@@ -119,27 +123,83 @@ header{
     background-color:#e5e5e5;
   }
 
-.nav-btn a:hover {
+.nav-btn a:hover, .add-nav-btn:hover {
     cursor: pointer;
     background-color:rgb(0, 70, 42);
     color:white;
 }
 
+.add-nav-btn{
+    border: none;
+}
+
 #main-container{
     margin-left:120px;
-    background-color: beige;
     flex-grow:1;
     column-width: 250px;
-    min-height:400px;
+    padding-top: 20px;
 }
 
 .todo-box{
-    background-color: pink;
-    margin: 20px;
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: var(--background-normal);
+    margin: 0 20 1em 20;
+    padding: 10px;
+    border: 1px solid var(--background-dark);
+    border-radius: 8px;
 }
 
 .box-name{
-    background-color: plum;
+}
+
+.box-name a{
+    color:whitesmoke;
+    background-color: var(--point-light);
+    display: block;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.box-name a:hover{
+    background-color: var(--point-normal);
+}
+
+.list{
+    margin-left:10px;
+}
+
+.no-items{
+    color:grey;
+}
+
+#add-todo{
+    right:10%;
+    bottom: 10%;
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    background-color: var(--point-light);
+    border: none;
+    position: fixed;
+}
+
+#add-todo:hover{
+    background-color: var(--point-normal);
+}
+
+.add-container{
+    display:none;
+    padding: 30px 20px;
+    height:100px;
+    background-color: skyblue;
+    position: absolute;
+    top:50%;
+    left:30%;
+}
+
+.category-list{
+    display:none;
 }
 
 /*반응형*/

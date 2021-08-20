@@ -207,10 +207,16 @@ header{
     display:none;
     padding: 30px 20px;
     height:100px;
-    background-color: skyblue;
+    background-color: var(--background-normal);
+    border: 1.5px solid var(--background-dark);
+    border-radius: 4px;
     position: absolute;
     top:50%;
     left:30%;
+}
+
+.add-container.active{
+    display:flex;
 }
 
 .category-list{

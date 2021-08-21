@@ -227,3 +227,24 @@ header{
 @media screen and (max-width:768px) {
     
 }
+
+/*Category.js */
+input[type=text]{
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+button[type=submit]{
+    text-align: center;
+    padding:4px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}

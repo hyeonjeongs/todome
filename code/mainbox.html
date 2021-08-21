@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./style3.css" /> <!--css 연결-->
     <script src="mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
     <title>TODOME</title> <!--타이틀-->
-
 </head>
 <body>
-    <header>
+    <div class = "container">
+        <header>
             <div id="header-title" class="header-group">
                 <div>
                     <h1><a href=""><i class="fas fa-stream"></i> TODOME</a></h1>
@@ -32,29 +32,28 @@
                 </div>
             </div>
             
-    </header> 
-
-    <div class = "container">
+        </header>
+        
         <div class="middle">
-           <div class="cate-gory">
-               
-                <nav class="middle-category">
-                    <ul class="nav-btn">
-                        <li class="btn-plus" id=0><a href = "#">All</a></li>
-                        <li class="btn-plus" id=1><a href = "#">category1</a></li>
-                        <li class="btn-plus" id=2><a href = "#">category2</a></li>
-                        
-                    </ul>
-                    
-                </nav>
-                 <div id=add-nav-btn>
-                    <button class="add-nav-btn">직접입력
-                        <i class="fas fa-folder-plus"></i>
-                    </button>
-
+            <nav class="middle-group">
+                <div class="nav-btn all">
+                    <a href = "#">All</a>
                 </div>
-           </div> <!-- 카테고리 -->
-
+                <div class="nav-btn">
+                    <a href = "#" class="category1">category1</a>
+                </div>
+                <div class="nav-btn">
+                    <a href = "#" class="category2">category2</a>
+                </div>
+                <div class="nav-btn">
+                    <a href = "#" class="category3">category3</a>
+                </div>
+        
+                <button class="add-nav-btn">직접입력
+                    <i class="fas fa-folder-plus"></i>
+                </button>
+            </nav>
+        
             <div id="main-container" class="middle-group">
                 <div id="todo-box1" class="todo-box">
                     <div class="box-name">
@@ -115,27 +114,30 @@
 
         <div class="add-container">
             <div class="input-box">
-                <button>
-                    <i class="fas fa-sort-down"></i>
-                    카테고리
-                </button>
-                <input class="input-todo" type="text">
-                <button>확인</button>
+                <div class="category-box">
+                    <button onclick="showCategoryList()">
+                        <i class="fas fa-sort-down"></i>
+                        카테고리
+                    </button>
+                    <div class="category-list">
+                        <button>category1</button>
+                        <button>category2</button>
+                        <button>category3</button>
+                        <button class="category-add-btn">
+                            직접추가
+                            <i class="fas fa-folder-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-text-box">
+                    <input class="input-todo" type="text">
+                    <button>확인</button>
+                </div>
             </div>
     
-            <div class="category-list">
-                <div>category1</div>
-                <div>category2</div>
-                <div>category3</div>
-                <button class="category-add-btn">
-                    직접추가
-                    <i class="fas fa-folder-plus"></i>
-                </button>
-            </div>
+            
         </div>
     </div>
-  
-
-</body>
     
+</body>
 </html>

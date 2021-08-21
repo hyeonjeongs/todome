@@ -32,6 +32,8 @@ function add_button(e){ //+,X 버튼생성
         
         for(let i=0; i<btn_plus.length;i++){
             //btn_plus[i].after('X');
+            let remove_button = document.createElement("div");
+            remove_button.innerHTML = "<button class='delete'><i>x</i></button>";
             btn_plus[i].after(remove_button);
         }
         plus_button.style.display = "block";

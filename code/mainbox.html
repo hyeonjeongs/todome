@@ -1,31 +1,138 @@
-<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://kit.fontawesome.com/c7ec1bb1a9.js" crossorigin="anonymous"></script>
-        <title>TODO</title>
-        <link rel="stylesheet" href="./style.css">
-    </head>
-
-    <body>
-        <div class = "container">
-            <header>
-                <div id="header-title">
-                    <h1>TODOME</h1>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://kit.fontawesome.com/c7ec1bb1a9.js" crossorigin="anonymous"></script> <!--웹 아이콘 주소-->
+    <link rel="stylesheet" href="./style3.css" /> <!--css 연결-->
+    <script src="mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
+    <title>TODOME</title> <!--타이틀-->
+</head>
+<body>
+    <div class = "container">
+        <header>
+            <div id="header-title" class="header-group">
+                <div>
+                    <h1><a href=""><i class="fas fa-stream"></i> TODOME</a></h1>
                     <h3>my own to-do list manager</h3>
                 </div>
-                <form class="search-form-group">
-                    <input id=search-form type="search">
-                    <button id="search-btn"><img src="./img/search.jpg" alt=""></button>
-                </form>
-                <div class="exit">
-                    <button id="logout-btn"><img src="./img/logout.jpg" alt=""></button>
-                </div>            
-            </header>
+            </div>
+    
+            <div id="header-btn-group" class="header-group">
+                <div id="search" class="header-btn">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div id="search-form" class="header-group">
+                    <input class="search-keyword" type="text">
+                    <div class="ok-btn">검색</div>
+                </div>
+                <div id="log-out" class="header-btn">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </div>
+            
+        </header>
+        
+        <div class="middle">
+            <nav class="middle-group">
+                <div class="nav-btn all">
+                    <a href = "#">All</a>
+                </div>
+                <div class="nav-btn">
+                    <a href = "#" class="category1">category1</a>
+                </div>
+                <div class="nav-btn">
+                    <a href = "#" class="category2">category2</a>
+                </div>
+                <div class="nav-btn">
+                    <a href = "#" class="category3">category3</a>
+                </div>
+        
+                <button class="add-nav-btn">직접입력
+                    <i class="fas fa-folder-plus"></i>
+                </button>
+            </nav>
+        
+            <div id="main-container" class="middle-group">
+                <div id="todo-box1" class="todo-box">
+                    <div class="box-name">
+                        <a href="#" class="category1">category1</a> <!--클릭하면 이동-->
+                    </div>
+                    <ul class="list">
+                        <li class="items">
+                            <input type="checkbox" name="CHECK" value="0">
+                            밥 먹기 
+                            <button class="btn-delete" onclick="deleteP(this)">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                        </li>
+                        <li class="items">
+                            <input type="checkbox" name="CHECK" value="0">
+                            숨쉬기
+                            <button class="btn-delete" onclick="deleteP(this)">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                        </li>
+                        <li class="items">
+                            <input type="checkbox" name="CHECK" value="0">
+                            물 마시기
+                            <button class="btn-delete" onclick="deleteP(this)">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
+                             
+                        </li>
+                    </ul>
+                    <ul class="list-completed">
+                    </ul>
+
+                </div>
+        
+                <div id="todo-box2" class="todo-box">
+                    <div class="box-name">
+                        <a href="#" class="category2">category2</a> <!--클릭하면 이동-->
+                    </div>
+                    <ul class="list">
+                        <li class="no-items">nothing</li>
+                    </ul>
+                </div>
+        
+                <div id="todo-box3" class="todo-box">
+                    <div class="box-name">
+                        <a href="#" class="category3">category3</a> <!--클릭하면 이동-->
+                    </div>
+                    <ul class="list">
+                        <li class="no-items">nothing</li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        <script type="module" src="./js/main.js"></script>
-    </body>
+        <button id="add-todo" onclick="showAddTodoForm()">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        <div class="add-container">
+            <div class="input-box">
+                <button>
+                    <i class="fas fa-sort-down"></i>
+                    카테고리
+                </button>
+                <input class="input-todo" type="text">
+                <button>확인</button>
+            </div>
+    
+            <div class="category-list">
+                <div>category1</div>
+                <div>category2</div>
+                <div>category3</div>
+                <button class="category-add-btn">
+                    직접추가
+                    <i class="fas fa-folder-plus"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+</body>
 </html>

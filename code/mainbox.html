@@ -114,23 +114,28 @@
 
         <div class="add-container">
             <div class="input-box">
-                <button>
-                    <i class="fas fa-sort-down"></i>
-                    카테고리
-                </button>
-                <input class="input-todo" type="text">
-                <button>확인</button>
+                <div class="category-box">
+                    <button onclick="showCategoryList()">
+                        <i class="fas fa-sort-down"></i>
+                        카테고리
+                    </button>
+                    <div class="category-list">
+                        <button>category1</button>
+                        <button>category2</button>
+                        <button>category3</button>
+                        <button class="category-add-btn">
+                            직접추가
+                            <i class="fas fa-folder-plus"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="input-text-box">
+                    <input class="input-todo" type="text">
+                    <button>확인</button>
+                </div>
             </div>
     
-            <div class="category-list">
-                <div>category1</div>
-                <div>category2</div>
-                <div>category3</div>
-                <button class="category-add-btn">
-                    직접추가
-                    <i class="fas fa-folder-plus"></i>
-                </button>
-            </div>
+            
         </div>
     </div>
     

@@ -206,21 +206,40 @@ header{
 .add-container{
     display:none;
     padding: 30px 20px;
-    height:100px;
     background-color: var(--background-normal);
     border: 1.5px solid var(--background-dark);
     border-radius: 4px;
     position: absolute;
-    top:50%;
-    left:30%;
+    top:30%;
+    left:28%;
 }
 
 .add-container.active{
+    display:block;
+}
+
+.input-box{
     display:flex;
 }
 
+.input-text-box{
+    flex-shrink: 0;
+}
+
+.category-box{
+    display: flex;
+    flex-direction: column;
+    margin-right: 5px;
+}
+
 .category-list{
-    display:none;
+    display:flex;
+    flex-direction: column;
+    width: 81.38px;
+}
+
+.cartegory-list.active{
+    display:flex;
 }
 
 /*반응형*/

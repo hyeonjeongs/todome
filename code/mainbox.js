@@ -1,7 +1,8 @@
 const searchBtn = document.querySelector('#search');
 const searchForm = document.querySelector('#search-form');
 let fadespeed = 300;
-const addTodoForm = document.querySelector('.add-container')
+const addTodoForm = document.querySelector('.add-container');
+const logoutBtn = document.querySelector("#logout-btn");
 
 searchBtn.addEventListener('click', ()=>{
     searchForm.classList.toggle('active');
@@ -15,3 +16,7 @@ function deleteP(child){
 function showAddTodoForm(){
     addTodoForm.classList.toggle('active');
 }
+
+logoutBtn.addEventListener('click', () => {
+    window.location.href="../index.html"
+});

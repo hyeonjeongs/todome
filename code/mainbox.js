@@ -2,8 +2,7 @@ const searchBtn = document.querySelector('#search');
 const searchForm = document.querySelector('#search-form');
 let fadespeed = 300;
 const addTodoForm = document.querySelector('.add-container');
-const logoutBtn = document.querySelector("#logout-btn");
-const cartegoryList = document.querySelector('.category-list');
+const logoutBtn = document.querySelector("#log-out");
 
 searchBtn.addEventListener('click', ()=>{
     searchForm.classList.toggle('active');

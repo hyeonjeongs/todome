@@ -37,7 +37,6 @@ ul{
     display:flex;
     flex-direction: column;
     background-color: rgb(250, 250, 250);
-   
 }
 
 header{
@@ -300,6 +299,22 @@ header{
     display:flex;
 }
 
+
+@media screen and (min-width:520px){
+    .middle{
+        display: flex;
+        flex-direction: row;
+    }
+    .cate-gory{
+        position:sticky;
+        top:0px;
+    }
+
+    #main-container{
+        margin-left: 0;
+        flex-grow: 13;
+    }
+}
 /*반응형*/
 @media screen and (max-width:500px) {
     .middle{

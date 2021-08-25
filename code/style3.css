@@ -206,8 +206,20 @@ header{
     margin-left:10px;
 }
 
-.no-items{
-    color:grey;
+.list, .list-empty, .list-finished{
+    margin-left:10px;
+}
+
+.list-empty, .list-finished{
+    display:none;
+}
+
+.list-active{
+    display: block;
+}
+
+.list-inactive{
+    display: none;
 }
 
 .btn-delete{
@@ -270,12 +282,12 @@ header{
 }
 
 .category-list{
-    display:flex;
+    display:none;
     flex-direction: column;
     width: 81.38px;
 }
 
-.cartegory-list.active{
+.cartegory-list-showing{
     display:flex;
 }
 

@@ -301,8 +301,40 @@ header{
 }
 
 /*반응형*/
-@media screen and (max-width:768px) {
-    
+@media screen and (max-width:500px) {
+    .middle{
+        display: flex;
+        flex-direction: column;
+    }
+    .cate-gory{
+        display: flex;
+        position:sticky;
+        top:0vh;
+        margin: 0px;
+        padding: 0px;
+        border-right: none;
+        max-height: 80px;
+        width:100%;
+        border-bottom: 1px solid var(--background-dark);
+    }
+
+    #main-container{
+        margin-left: 0;
+    }
+
+    .nav-btn{
+        display: flex;
+        margin: 0;
+        margin-left: 10px;
+        
+    }
+
+    .nav-btn a{
+        margin-top: 0;
+        margin-right: 14px;
+    }
+
+
 }
 
 /*Category.js */

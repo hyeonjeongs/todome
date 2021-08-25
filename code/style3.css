@@ -222,6 +222,10 @@ header{
     display: none;
 }
 
+.no-items{
+    color: gray;
+}
+
 .btn-delete{
     border-radius: 20px;
     border:none;

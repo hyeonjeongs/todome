@@ -3,6 +3,7 @@ const searchForm = document.querySelector('#search-form');
 let fadespeed = 300;
 const addTodoForm = document.querySelector('.add-container');
 const logoutBtn = document.querySelector("#log-out");
+const categoryList = document.querySelector(".category-list");
 
 searchBtn.addEventListener('click', ()=>{
     searchForm.classList.toggle('active');
@@ -18,7 +19,7 @@ function showAddTodoForm(){
 }
 
 function showCategoryList(){
-    cartegoryList.classList.toggle('active');
+    categoryList.classList.toggle('cartegory-list-showing');
 }
 
 logoutBtn.addEventListener('click', () => {

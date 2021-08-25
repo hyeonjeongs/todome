@@ -59,6 +59,7 @@ function saveToDo(text){
 function handleSubmit(event){
     event.preventDefault();
     const currentInput = input.value;
+    input.value = "";
     addToDoText(currentInput);
 }
 function showNothing(){

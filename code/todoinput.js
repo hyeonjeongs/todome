@@ -14,13 +14,24 @@ function deleteP(child){
     showNothing();
 }
 
+function handleCheckboxChange(target, checkornot){
+    if(checkornot === true){
+        const targetParentNode = target.parentNode;
+        const targetPNextSibling = targetParentNode.nextElementSibling;
+        const listFinished = targetPNextSibling.nextElementSibling;
+        listFinished.appendChild(target);
+        showNothing();
+    } else{
+        toDoList.appendChild(target);
+        showNothing();
+    }
+}
+
 function addToDoText(text){
     const li = document.createElement("li");
     li.className = "items";
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
-    checkbox.name = "CHECK";
-    checkbox.value = 0;
     const span = document.createElement("span");
     span.innerText = ` ${text} `;
     const delBtn = document.createElement("button");
@@ -36,6 +47,9 @@ function addToDoText(text){
     li.appendChild(delBtn);
     toDoList.appendChild(li);
     showNothing();
+    checkbox.onchange = function(){
+        handleCheckboxChange(li, checkbox.checked);
+    }
 }
 
 function saveToDo(text){

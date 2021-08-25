@@ -93,22 +93,17 @@ header{
 .middle{
     display:flex;
     height:100vh;
-
-    
 }
 
 .middle-group{
-    flex-grow: 0;
+    flex-grow: 1;
 }
-
-
 
 .cate-gory{
     border-right:1px solid grey;
     flex-basis:150px;
     flex-shrink: 0;
     padding: 10px;
-    height:50%;
     text-align: center;
     z-index :1;
     background-color:rgb(255, 255, 255);
@@ -210,8 +205,18 @@ header{
     margin-left:10px;
 }
 
-.list-empty, .list-finished{
+.list-empty{
     display:none;
+}
+
+.list-finished{
+    border-top: solid var(--background-dark) 1px;
+    padding-top: 10px;
+    color: gray;
+}
+
+.check-box-click{
+    background: gray;
 }
 
 .list-active{

@@ -7,34 +7,36 @@
     <script src="https://kit.fontawesome.com/c7ec1bb1a9.js" crossorigin="anonymous"></script> <!--웹 아이콘 주소-->
     <link rel="stylesheet" href="./style3.css" /> <!--css 연결-->
     <script src="mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
+    <script src="./js/Category.js" defer></script>
     <title>TODOME</title> <!--타이틀-->
 
 </head>
 <body>
-    <header>
-            <div id="header-title" class="header-group">
-                <div>
-                    <h1><a href=""><i class="fas fa-stream"></i> TODOME</a></h1>
-                    <h3>my own to-do list manager</h3>
-                </div>
-            </div>
-    
-            <div id="header-btn-group" class="header-group">
-                <div id="search" class="header-btn">
-                    <i class="fas fa-search"></i>
-                </div>
-                <div id="search-form" class="header-group">
-                    <input class="search-keyword" type="text">
-                    <div class="ok-btn">검색</div>
-                </div>
-                <div id="log-out" class="header-btn">
-                    <i class="fas fa-sign-out-alt"></i>
-                </div>
-            </div>
-            
-    </header> 
-
     <div class = "container">
+        <header>
+                <div id="header-title" class="header-group">
+                    <div>
+                        <h1><a href=""><i class="fas fa-stream"></i> TODOME</a></h1>
+                        <h3>my own to-do list manager</h3>
+                    </div>
+                </div>
+        
+                <div id="header-btn-group" class="header-group">
+                    <div id="search" class="header-btn">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div id="search-form" class="header-group">
+                        <input class="search-keyword" type="text">
+                        <div class="ok-btn">검색</div>
+                    </div>
+                    <div id="log-out" class="header-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </div>
+                </div>
+                
+        </header> 
+
+    
         <div class="middle">
            <div class="cate-gory">
                
@@ -53,7 +55,8 @@
                     </button>
 
                 </div>
-           </div> <!-- 카테고리 -->
+          </div>
+   
 
             <div id="main-container" class="middle-group">
                 <div id="todo-box1" class="todo-box">
@@ -134,7 +137,7 @@
             </div>
         </div>
     </div>
-  
+  </div>
 
 </body>
     

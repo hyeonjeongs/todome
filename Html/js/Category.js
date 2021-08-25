@@ -2,6 +2,7 @@ init();
 let count=3;
 
 
+
 function init(){ 
     let add_butt = document.querySelector('#add-nav-btn'); //Q.여기 getelementByid로 하면 왜 오류?
    
@@ -27,7 +28,7 @@ function add_button(e){ //+,X 버튼생성
 
     else{ //+,X 버튼생성하는 코드
         plus_button.innerHTML ="<button id='bu'><i class='fas fa-plus-circle'></i></button>";
-        remove_button.innerHTML = "<button class='delete'><i>x</i></button>";
+        //remove_button.innerHTML = "<button class='delete'><i>x</i></button>";
         add_nav_btn.appendChild(plus_button);
         
         for(let i=0; i<btn_plus.length;i++){

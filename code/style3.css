@@ -80,7 +80,7 @@ header{
     position: relative;
 }
 
-.search-box input {
+#search-keyword {
     padding-right: 20px;
 }
 
@@ -91,7 +91,7 @@ header{
     color: white;
     padding: 0px 4px;
     border: none;
-    margin: 3px 3px 0 0;
+    margin: 10px 5px 10px 0;
     display: none;
 }
 
@@ -406,6 +406,10 @@ button[type=submit]{
     cursor: pointer;
     margin-left: 5px;
 
+}
+
+ul.list span {
+    margin: 0 5px;
 }
 
 .cg-remove{

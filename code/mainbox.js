@@ -7,7 +7,6 @@ const categoryList = document.querySelector(".category-list");
 const searchKeyword = document.querySelector("#search-keyword");
 const resetButton = document.querySelector("#reset-btn");
 const okButton = document.querySelector(".ok-btn");
-//const 
 
 
 searchBtn.addEventListener('click', ()=>{
@@ -31,6 +30,7 @@ logoutBtn.addEventListener('click', () => {
     window.location.href="./index.html"
 });
 
+// x버튼 보이기
 function showResetButton() {
     const value = document.getElementById('search-keyword').value;
     if(value.length > 0) {
@@ -49,17 +49,26 @@ resetButton.addEventListener('click', () => {
     showResetButton();
 });
 
+// 결과화면 보이기
 function showResult() {
     const keyword = document.getElementById('search-keyword').value;
     let todoBox = document.getElementsByClassName("todo-box");
-    if(keyword == "밥 먹기") {
-        for(let i=0; i<todoBox.length; i++) {
-            todoBox[i].style.display = "none";
+    let items = document.getElementsByClassName("items");
+    for(let i=0; i<items.length; i++) {
+        const text = `${items[i].textContent}`;
+        if(keyword === text) {
+            console.log("right");
+            for(let i=0; i<todoBox.length; i++) {
+                todoBox[i].style.display = "none";
+            }
+            items[i].parentNode.parentNode.style.display = "block";
+            return;
         }
-        todoBox[0].style.display = "block";
     }
+    alert("검색 결과가 없습니다.");
 };
 
+// 검색 엔터 이벤트
 function enterKey() {
     if(window.event.keyCode == 13) {
         this.showResult();

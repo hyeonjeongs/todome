@@ -33,7 +33,7 @@ function addToDoText(text){
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     const span = document.createElement("span");
-    span.innerText = ` ${text} `;
+    span.innerText = `${text}`;
     const delBtn = document.createElement("button");
     delBtn.className = "btn-delete";
     delBtn.onclick = function(){

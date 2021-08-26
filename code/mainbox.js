@@ -3,6 +3,7 @@ const searchForm = document.querySelector('#search-form');
 let fadespeed = 300;
 const addTodoForm = document.querySelector('.add-container');
 const logoutBtn = document.querySelector("#log-out");
+const selectedCategory = document.querySelector('#selected-category');
 const categoryList = document.querySelector(".category-list");
 const searchKeyword = document.querySelector("#search-keyword");
 const resetButton = document.querySelector("#reset-btn");
@@ -23,7 +24,18 @@ function showAddTodoForm(){
 }
 
 function showCategoryList(){
-    categoryList.classList.toggle('cartegory-list-showing');
+    const hasClass = categoryList.classList.contains('cartegory-list-showing');
+    if(hasClass === false){
+        categoryList.classList.add('cartegory-list-showing');
+    } else{
+        categoryList.classList.remove('cartegory-list-showing');
+    }
+    //categoryList.classList.toggle('cartegory-list-showing');
+}
+
+function selectCategory(buttonClass){
+    selectedCategory.innerText = buttonClass;
+    showCategoryList()
 }
 
 logoutBtn.addEventListener('click', () => {

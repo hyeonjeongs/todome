@@ -189,11 +189,6 @@ header{
     flex-grow: 13;
 }
 
-#main-container.size{
-    margin-left:165px;
-}
-
-
 .todo-box{
     break-inside: avoid;
     page-break-inside: avoid;

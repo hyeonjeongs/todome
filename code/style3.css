@@ -114,6 +114,7 @@ header{
 
 .middle{
     display:flex;
+    flex-direction: row;
     height:100vh;
 }
 
@@ -130,9 +131,10 @@ header{
     z-index :1;
     background-color:rgb(255, 255, 255);
     left :0;
-    position:fixed;
     align-items: center;
     min-width: 103px;
+    position:sticky;
+    top:0px;
 
 }
 
@@ -182,10 +184,9 @@ header{
 }
 
 #main-container{
-    margin-left:120px;
-    flex-grow:1;
     column-width: 250px;
     padding-top: 20px;
+    flex-grow: 13;
 }
 
 #main-container.size{
@@ -323,21 +324,7 @@ header{
 }
 
 
-@media screen and (min-width:520px){
-    .middle{
-        display: flex;
-        flex-direction: row;
-    }
-    .cate-gory{
-        position:sticky;
-        top:0px;
-    }
 
-    #main-container{
-        margin-left: 0;
-        flex-grow: 13;
-    }
-}
 /*반응형*/
 @media screen and (max-width:500px) {
     .middle{

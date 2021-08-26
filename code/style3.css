@@ -287,7 +287,7 @@ header{
     border-radius: 4px;
     position: absolute;
     top:30%;
-    left:28%;
+    left:40%;
 }
 
 .add-container.active{
@@ -352,6 +352,10 @@ header{
     .nav-btn a{
         margin-top: 0;
         margin-right: 14px;
+    }
+
+    .add-container {
+        left: 20%;
     }
 
 

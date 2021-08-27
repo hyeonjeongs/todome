@@ -80,6 +80,19 @@ function back_cg(add_nav_btn,back_button,plus_button){
 
 
 
+function showNothing(){
+    const allToDoList = document.querySelectorAll(".list");
+    console.log(allToDoList);
+    for(let index = 0; index<allToDoList.length; index++){
+        if(allToDoList[index].childElementCount === 0){
+            console.log(allToDoList[index].childElementCount);
+            allToDoList[index].nextElementSibling.classList.add('list-active');
+        } else{
+            allToDoList[index].nextElementSibling.classList.remove('list-active');
+        }
+    }
+}
+
 function add_cg(){// 추가 클릭시 카테고리 추가
     let cg_value = document.querySelector('.cg-form');
     let btn_plus =document.querySelectorAll('.btn-plus');
@@ -109,7 +122,7 @@ function add_cg(){// 추가 클릭시 카테고리 추가
 
     }
     cg_value.elements[0].value=""; //입력창 비어주기
-
+    showNothing();
 }
 
 

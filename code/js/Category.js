@@ -91,6 +91,7 @@ function add_cg(){// 추가 클릭시 카테고리 추가
 
         makeToDoBox(cg_value.elements[0].value);
         makeButtonInToCategoryList(cg_value.elements[0].value);
+        showNothing()
         
         li.innerHTML = `<a href = '#' class='bt'>${cg_value.elements[0].value}<button class="cg-remove"><i class='fas fa-times-circle' id='rv-em'></i></button></a>`;
         a_dd.appendChild(li);

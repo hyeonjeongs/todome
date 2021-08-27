@@ -10,6 +10,7 @@ const TODO = "toDoThing"
 
 const getCategoryName = document.querySelector("#selected-category");
 const mainContainer = document.querySelector("#main-container");
+const addTodoForm = document.querySelector('.add-container');
 
 function deleteP(child){
     let parent = child.parentNode;
@@ -73,12 +74,17 @@ function findToDoBoxWithCategoryName(categoryName){
     return ourToDoBox;
 }
 
+function showAddTodoForm(){
+    addTodoForm.classList.toggle('active');
+}
+
 function handleSubmit(event){
     event.preventDefault();
     const currentInput = input.value;
     const categoryName = getCategoryName.innerText;//선택한 카테고리 이름.
     input.value = "";
     addToDoText(currentInput, categoryName);
+    showAddTodoForm();
 }
 function showNothing(){
     for(let index = 0; index<allToDoList.length; index++){

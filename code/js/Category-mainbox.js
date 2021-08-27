@@ -36,6 +36,10 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
 
 export function makeButtonInToCategoryList(categoryName){
     const button = document.createElement("button");
+    button.className = categoryName;
     button.innerText = categoryName;
+    button.onclick = function(){
+        selectCategory(categoryName);
+    }
     CategoryList.appendChild(button);
 }

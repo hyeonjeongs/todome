@@ -1,7 +1,7 @@
 const mainContainer = document.querySelector("#main-container");
 const CategoryList = document.querySelector(".category-list");
 
-function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두박스를 만드는 함수
+export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두박스를 만드는 함수
     const divToDoBox = document.createElement("div");
     divToDoBox.className = "todo-box";
     divToDoBox.classList.add(categoryName); //카테고리 이름을 클래스에 추가해서 찾는 방식을 제안함다.
@@ -34,7 +34,7 @@ function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두박스를
     mainContainer.appendChild(divToDoBox);
 }
 
-function makeButtonInToCategoryList(categoryName){
+export function makeButtonInToCategoryList(categoryName){
     const button = document.createElement("button");
     button.innerText = categoryName;
     CategoryList.appendChild(button);

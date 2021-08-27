@@ -6,8 +6,8 @@
     
     <script src="https://kit.fontawesome.com/c7ec1bb1a9.js" crossorigin="anonymous"></script> <!--웹 아이콘 주소-->
     <link rel="stylesheet" href="./style3.css" /> <!--css 연결-->
-    <script src="mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
-    <script src="./js/Category.js" defer></script>
+    <script src="./mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
+    <script type="module" src="./js/Category.js" defer></script>
     <script src="todoinput.js" defer></script>
     <title>TODOME</title> <!--타이틀-->
 </head>
@@ -44,7 +44,7 @@
                
                 <nav class="middle-category">
                     <ul class="nav-btn">
-                        <li class="btn-plus" id=0><a href = "javascript:void(0)" class="bt" onclick="cg_box_all(this)">All</a></li>
+                        <li class="btn-plus" id=0><a href = "javascript:void(0)" class="bt" >All</a></li>
 
                     </ul>
                     
@@ -54,6 +54,12 @@
                         <i class="fas fa-folder-plus"></i>
                     </button>
 
+                </div>
+                <div >
+                    <button class='bu-plus'><i class='fas fa-plus-circle'></i></button>
+                </div>
+                <div>
+                    <button class='bu-back'><i class='fas fa-arrow-alt-circle-left'></i></button>
                 </div>
           </div>
         

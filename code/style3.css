@@ -159,7 +159,7 @@ header{
     padding: 10px 20px 10px 20px;
  
     margin-top: 7px;
-    margin-left: 12px;
+    margin-left: 60px;
     text-decoration: none;
     display: block;
     color: black;
@@ -384,15 +384,34 @@ input[type=text]{
     transition: width 0.4s ease-in-out;
 }
 
-.bu-plus, .bu-back{
+.bu-plus{
     margin-top : 12px;
     font-size: 12px;
     padding:6px;
     color: var(--point-normal);
     float: left;
-    margin-left : 14px;
+    margin-left : 60px;
+    display: none;
 
 
+}
+
+.bu-back{
+    margin-top : 12px;
+    font-size: 12px;
+    padding:6px;
+    color: var(--point-normal);
+    float: left;
+    margin-left : 20px;
+    display: none;
+}
+
+.bu-back.show{
+    display: block;
+}
+
+.bu-plus.show{
+    display :block;
 }
 
 button[type=submit]{
@@ -414,14 +433,20 @@ ul.list span {
     border:none;
     color: var(--background-dark);
     padding:0%;
-    margin : 6px 0px 0px 10px
+    margin : 6px 0px 0px 10px;
+    display: none;
 
 
+}
+
+.cg-remove.show{
+    display: block;
 }
 
 .cg-remove:hover{
     color: #f78888;
 }
+
 
 .todo-box.show{
     display: flex;

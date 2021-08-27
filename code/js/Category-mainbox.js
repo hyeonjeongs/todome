@@ -21,6 +21,7 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
     ulListEmpty.className = "list-empty";
     const liNoItems = document.createElement("li");
     liNoItems.className = "no-items";
+    liNoItems.innerText = "nothing";
     ulListEmpty.appendChild(liNoItems);
 
     const ulListFinished = document.createElement("ul");

@@ -138,6 +138,7 @@ function cg_click(e){ //edit 클릭시
         }
     }else if(e.target.className =='bt' && e.target.parentNode.id !=0){//카테고리 클릭하는 경우(ALL 제외)  
         cg_box(e.target.parentNode.id);
+        
         //x버튼 없을때만 카테고리 볼 수 있도록 설정
     
     }
@@ -145,20 +146,34 @@ function cg_click(e){ //edit 클릭시
 
 function cg_box_all(th){//카테고리 전체보기
     let todo_box = document.getElementsByClassName("todo-box");
+    let bt = document.getElementsByClassName("bt");
+
     for(let i =0;i<todo_box.length;i++){
         todo_box[i].style.display="block";
     }
 
+    for(let i=0;i<bt.length;i++){//카테고리 All 메뉴 선택시 색상 변경
+        bt[i].classList.remove('color');
+    }
+    th.classList.add('color');
+
 }
+
 
 function cg_box(id_value){ //카테고리 선택하면 그것만 보이도록 함
     let todo_box = document.getElementsByClassName("todo-box");
- 
-    for(let i =0;i<todo_box.length;i++){
+    let bt = document.getElementsByClassName("bt");
+
+    for(let i =0;i<todo_box.length;i++){//카테고리 todo_box 보이는거 설정
         todo_box[i].style.display="none";
     }
-    
     todo_box[id_value-1].style.display = "block";
+
+
+    for(let i=0;i<bt.length;i++){//카테고리 선택시 color 변경
+        bt[i].classList.remove('color');
+    }
+    bt[id_value].classList.add('color');
 
     
 

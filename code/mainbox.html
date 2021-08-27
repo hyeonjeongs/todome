@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./style3.css" /> <!--css 연결-->
     <script src="mainbox.js" defer></script> <!--js 연결, defer 키워드 필수-->
     <script src="./js/Category.js" defer></script>
+    <script src="todoinput.js" defer></script>
     <title>TODOME</title> <!--타이틀-->
 </head>
 <body>
@@ -25,7 +26,10 @@
                     <i class="fas fa-search"></i>
                 </div>
                 <div id="search-form" class="header-group">
-                    <input class="search-keyword" type="text">
+                    <div class="search-box">
+                        <input id="search-keyword" type="text">
+                        <button type="reset" id="reset-btn">x</button>
+                    </div>
                     <div class="ok-btn">검색</div>
                 </div>
                 <div id="log-out" class="header-btn">
@@ -36,7 +40,7 @@
         </header>
         
         <div class="middle">
-            <div class="cate-gory">
+            <div class="cate-gory middle-group">
                
                 <nav class="middle-category">
                     <ul class="nav-btn">
@@ -54,54 +58,71 @@
           </div>
         
             <div id="main-container" class="middle-group">
-                <div id="todo-box1" class="todo-box" id=1>
+                <div id="todo-box1" class="todo-box 책">
                     <div class="box-name">
-                        <a href="#" class="category1">category1</a> <!--클릭하면 이동-->
+                        <a href="#" class="책">책</a> <!--클릭하면 이동-->
                     </div>
                     <ul class="list">
+                        <!--내 맘 속에 저장 ㅇ.<~
                         <li class="items">
                             <input type="checkbox" name="CHECK" value="0">
-                            밥 먹기 
+                            <span>밥 먹기</span> 
                             <button class="btn-delete" onclick="deleteP(this)">
                                 <i class="fas fa-times-circle"></i>
                             </button>
                         </li>
                         <li class="items">
                             <input type="checkbox" name="CHECK" value="0">
-                            숨쉬기
+                            <span>숨쉬기</span>
                             <button class="btn-delete" onclick="deleteP(this)">
                                 <i class="fas fa-times-circle"></i>
                             </button>
                         </li>
                         <li class="items">
                             <input type="checkbox" name="CHECK" value="0">
-                            물 마시기
+                            <span>물 마시기</span>
                             <button class="btn-delete" onclick="deleteP(this)">
                                 <i class="fas fa-times-circle"></i>
                             </button>
-                             
                         </li>
+                        -->
                     </ul>
-                    <ul class="list-completed">
+                    <ul class="list-empty">
+                        <li class="no-items">nothing</li>
+                    </ul>
+                    <ul class="list-finished">
+                        
                     </ul>
 
                 </div>
         
-                <div id="todo-box2" class="todo-box" id=2>
+                <div id="todo-box2" class="todo-box 공부">
                     <div class="box-name">
-                        <a href="#" class="category2">category2</a> <!--클릭하면 이동-->
+                        <a href="#" class="공부">공부</a> <!--클릭하면 이동-->
                     </div>
                     <ul class="list">
+
+                    </ul>
+                    <ul class="list-empty">
                         <li class="no-items">nothing</li>
+                    </ul>
+                    <ul class="list-finished">
+
                     </ul>
                 </div>
         
-                <div id="todo-box3" class="todo-box" id=3>
+                <div id="todo-box3" class="todo-box 영화">
                     <div class="box-name">
-                        <a href="#" class="category3">category3</a> <!--클릭하면 이동-->
+                        <a href="#" class="영화">영화</a> <!--클릭하면 이동-->
                     </div>
                     <ul class="list">
+
+                    </ul>
+                    <ul class="list-empty">
                         <li class="no-items">nothing</li>
+                    </ul>
+                    <ul class="list-finished">
+
                     </ul>
                 </div>
             </div>
@@ -116,22 +137,24 @@
                 <div class="category-box">
                     <button onclick="showCategoryList()">
                         <i class="fas fa-sort-down"></i>
-                        카테고리
+                        <span id = "selected-category">카테고리</span>
                     </button>
                     <div class="category-list">
-                        <button>category1</button>
-                        <button>category2</button>
-                        <button>category3</button>
+                        <button class="책" onclick="selectCategory('책')">책</button>
+                        <button class="공부" onclick="selectCategory('공부')">공부</button>
+                        <button class="영화" onclick="selectCategory('영화')">영화</button>
+                        <!--없애는 것을 추천~ㅎㅎ..
                         <button class="category-add-btn">
                             직접추가
                             <i class="fas fa-folder-plus"></i>
                         </button>
+                        -->
                     </div>
                 </div>
-                <div class="input-text-box">
+                <form class="input-text-box">
                     <input class="input-todo" type="text">
                     <button>확인</button>
-                </div>
+                </form>
             </div>
     
             

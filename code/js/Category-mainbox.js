@@ -9,7 +9,7 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
     const divBoxName = document.createElement("div");
     divBoxName.className = "box-name";
     const a = document.createElement("a");
-    a.href = "#";
+    //a.href = "#";
     a.className = categoryName;
     a.innerText = categoryName;
     divBoxName.appendChild(a);
@@ -31,6 +31,23 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
     divToDoBox.appendChild(ulList);
     divToDoBox.appendChild(ulListEmpty);
     divToDoBox.appendChild(ulListFinished);
+    divBoxName.addEventListener('click', () => {//box이름 버튼 클릭
+        let todoBox = document.getElementsByClassName("todo-box");
+        let bt = document.getElementsByClassName("bt");
+
+        for(let i=0; i<todoBox.length; i++) {
+            todoBox[i].style.display = "none";
+        }
+        divBoxName.parentNode.style.display = "block";
+
+        for(let i=0;i<bt.length;i++){//카테고리 선택시 color 변경
+            bt[i].classList.remove('color');
+            if(bt[i].innerText == categoryName) {
+                bt[i].classList.add('color');
+            }
+        }
+    });
+
 
     mainContainer.appendChild(divToDoBox);
 }

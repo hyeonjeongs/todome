@@ -244,6 +244,23 @@ header{
     color: gray;
 }
 
+.list-finished-hide{ /*이걸 먹이면 안 보임*/
+    display: none;
+}
+
+.more{
+    display: none;
+}
+
+.more:hover{
+    color:rgb(0, 70, 42);
+}
+
+.more-show{
+    display:block;
+}
+
+
 .check-box-click{
     background: gray;
 }

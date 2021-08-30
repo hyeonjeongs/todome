@@ -4,8 +4,6 @@ let toDoBox = document.querySelector("#todo-box1");
 const toDoList = toDoBox.querySelector(".list");
 const toDoText = toDoList.querySelector("span");
 
-const allToDoList = document.querySelectorAll(".list");
-
 const TODO = "toDoThing"
 
 const getCategoryName = document.querySelector("#selected-category");
@@ -87,6 +85,9 @@ function handleSubmit(event){
     showAddTodoForm();
 }
 function showNothing(){
+    
+    const allToDoList = document.querySelectorAll(".list");
+    console.log(allToDoList);
     for(let index = 0; index<allToDoList.length; index++){
         if(allToDoList[index].childElementCount === 0){
             allToDoList[index].nextElementSibling.classList.add('list-active');

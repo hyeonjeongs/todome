@@ -1,8 +1,8 @@
 const inputBox = document.querySelector(".input-text-box");
 const input = inputBox.querySelector("input");
 let toDoBox = document.querySelector("#todo-box1");
-const toDoList = toDoBox.querySelector(".list");
-const toDoText = toDoList.querySelector("span");
+//const toDoList = toDoBox.querySelector(".list");
+//const toDoText = toDoList.querySelector("span");
 
 const TODO = "toDoThing"
 

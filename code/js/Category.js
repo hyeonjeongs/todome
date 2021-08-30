@@ -85,7 +85,7 @@ function showNothing(){
     console.log(allToDoList);
     for(let index = 0; index<allToDoList.length; index++){
         if(allToDoList[index].childElementCount === 0){
-            console.log(allToDoList[index].childElementCount);
+            //console.log(allToDoList[index].childElementCount);
             allToDoList[index].nextElementSibling.classList.add('list-active');
         } else{
             allToDoList[index].nextElementSibling.classList.remove('list-active');
@@ -134,8 +134,19 @@ function cg_click(e){ //edit 클릭시
         if(cg_remove){
             let remove = e.target.parentNode.parentNode.parentNode;
             let parentnode = remove.parentNode;
+            
+            let rv_id = remove.id -1;
+            let todo_box = document.querySelectorAll(".todo-box");
+            let input_box = document.querySelectorAll(".category-list-button");
+            
+
+
             parentnode.removeChild(remove);
-            count--;
+            todo_box[rv_id].parentNode.removeChild(todo_box[rv_id]);
+            input_box[rv_id].parentNode.removeChild(input_box[rv_id]);
+
+            
+            
         }
         else{
             console.log("Not delete")
@@ -148,20 +159,6 @@ function cg_click(e){ //edit 클릭시
     }
 }
 
-/* function cg_box_all(th){//카테고리 전체보기
-    let todo_box = document.getElementsByClassName("todo-box");
-    let bt = document.getElementsByClassName("bt");
-
-    for(let i =0;i<todo_box.length;i++){
-        todo_box[i].style.display="block";
-    }
-
-    for(let i=0;i<bt.length;i++){//카테고리 All 메뉴 선택시 색상 변경
-        bt[i].classList.remove('color');
-    }
-    th.classList.add('color');
-
-} */
 
 
 function cg_box(id_value){ //카테고리 선택하면 그것만 보이도록 함
@@ -175,7 +172,7 @@ function cg_box(id_value){ //카테고리 선택하면 그것만 보이도록 �
             for(let i =0;i<todo_box.length;i++){//카테고리 todo_box 보이는거 설정
                 todo_box[i].style.display="none";
             }
-            todo_box[id_value].style.display = "block";
+            todo_box[id_value-1].style.display = "block";
         }else{
             for(let i =0;i<todo_box.length;i++){//카테고리 todo_box 보이는거 설정
                 todo_box[i].style.display="block";

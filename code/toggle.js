@@ -22,30 +22,15 @@ export function showToggle(){
     }
 }
 
-function createToggleElement(where){
-    const divMore = document.createElement("div");
-    divMore.className = "more";
-    const i = document.createElement("i");
-    i.className = "fas fa-caret-right";
-    const spanMore = document.createElement("span");
-    spanMore.innerText = " 더보기";
-    divMore.appendChild(i);
-    divMore.appendChild(spanMore);
-    divMore.addEventListener('click', ()=>{
-        moreClickHandler(divMore);
-    })
-    where.prepend(divMore);
-}
-
-function createEventListner(){ //카테고리를 생성할 때마다 특정
-    console.log('createElementListener 실행')
-    const moreElement = document.querySelectorAll(".more");
-    for(let i=0; i<moreElement.length; i++){
-        moreElement[i].addEventListener('click', ()=>{
-            moreClickHandler(moreElement[i]);
-        })
-    }
-}
+//function createEventListner(){ //카테고리를 생성할 때마다 특정
+//    console.log('createElementListener 실행')
+//    const moreElement = document.querySelectorAll(".more");
+//    for(let i=0; i<moreElement.length; i++){
+//        moreElement[i].addEventListener('click', ()=>{
+//            moreClickHandler(moreElement[i]);
+//        })
+//    }
+//}
 
 function moreClickHandler(target){
     if(target.firstElementChild.className === "fas fa-caret-right"){
@@ -64,5 +49,3 @@ function moreClickHandler(target){
         }
     }
 }
-
-createEventListner();

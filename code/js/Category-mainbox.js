@@ -27,6 +27,19 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
     const ulListFinished = document.createElement("ul");
     ulListFinished.className = "list-finished";
 
+    const divMore = document.createElement("div");
+    divMore.className = "more";
+    const iToggle = document.createElement("i");
+    iToggle.className = "fas fa-caret-right";
+    const spanMore = document.createElement("span");
+    spanMore.innerText = " 더보기";
+    divMore.appendChild(iToggle);
+    divMore.appendChild(spanMore);
+    divMore.addEventListener('click', ()=>{
+        moreClickHandler(divMore);
+    })
+    ulListFinished.prepend(divMore);
+
     divToDoBox.appendChild(divBoxName);
     divToDoBox.appendChild(ulList);
     divToDoBox.appendChild(ulListEmpty);
@@ -62,4 +75,22 @@ export function makeButtonInToCategoryList(categoryName){
         selectCategory(categoryName);
     }
     CategoryList.appendChild(button);
+}
+
+function moreClickHandler(target){
+    if(target.firstElementChild.className === "fas fa-caret-right"){
+        target.firstElementChild.className = "fas fa-caret-down";
+        const finishedElement = target.parentElement;
+        const childcount = finishedElement.childElementCount;
+        for(let k=1; k<childcount; k++){
+            finishedElement.children[k].classList.remove("list-finished-hide");
+        }
+    } else if(target.firstElementChild.className === "fas fa-caret-down"){
+        target.firstElementChild.className = "fas fa-caret-right";
+        const finishedElement = target.parentElement;
+        const childcount = finishedElement.childElementCount;
+        for(let k=1; k<childcount; k++){
+            finishedElement.children[k].classList.add("list-finished-hide");
+        }
+    }
 }

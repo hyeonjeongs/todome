@@ -1,3 +1,5 @@
+import{ showToggle} from "./toggle.js";
+
 const inputBox = document.querySelector(".input-text-box");
 const input = inputBox.querySelector("input");
 let toDoBox = document.querySelector("#todo-box1");
@@ -14,6 +16,7 @@ function deleteP(child){
     let parent = child.parentNode;
     parent.parentNode.removeChild(parent);
     showNothing();
+    showToggle();
 }
 
 function handleCheckboxChange(target, checkornot, ourToDoList){
@@ -23,9 +26,11 @@ function handleCheckboxChange(target, checkornot, ourToDoList){
         const listFinished = targetPNextSibling.nextElementSibling;
         listFinished.appendChild(target);
         showNothing();
+        showToggle();
     } else{
         ourToDoList.appendChild(target);
         showNothing();
+        showToggle();
     }
 }
 
@@ -100,6 +105,7 @@ function showNothing(){
 function init(){
     inputBox.addEventListener("submit", handleSubmit);
     showNothing();
+    showToggle();
 }
 
 init()

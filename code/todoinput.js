@@ -86,6 +86,7 @@ function handleSubmit(event){
     const currentInput = input.value;
     const categoryName = getCategoryName.innerText;//선택한 카테고리 이름.
     input.value = "";
+    getCategoryName.innerText = '카테고리';
     addToDoText(currentInput, categoryName);
     showAddTodoForm();
 }

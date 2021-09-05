@@ -160,7 +160,7 @@ header{
     padding: 10px 20px 10px 20px;
  
     margin-top: 7px;
-    margin-left: 60px;
+    margin-left: 80px;
     text-decoration: none;
     display: block;
     color: black;
@@ -409,7 +409,7 @@ input[type=text]{
     padding:6px;
     color: var(--point-normal);
     float: left;
-    margin-left : 60px;
+    margin-left : 80px;
     display: none;
 
 

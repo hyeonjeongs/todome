@@ -13,7 +13,7 @@
 <img width="350" alt="sfds" src="https://user-images.githubusercontent.com/81394850/153700389-ec393bfb-074d-427b-98d7-747097c881f7.png">
 
 🟢 __Main Color__
-<img width="143" alt="dd" src="https://user-images.githubusercontent.com/81394850/153700444-c04fe9a0-460f-4fd1-abc2-370ffacd5ecf.png">
+<img width="200" alt="dd" src="https://user-images.githubusercontent.com/81394850/153700444-c04fe9a0-460f-4fd1-abc2-370ffacd5ecf.png">
 
 ### ✅프로젝트 요구사항
 > 로그인 창(view) 구현

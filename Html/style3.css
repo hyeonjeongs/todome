@@ -1,0 +1,250 @@
+:root{
+    --white-color:#f0f4f5; /* color:var(--white-color)로 사용 */
+    --background-light:#ffffff;
+    --background-normal:#fafafa;
+    --background-dark:#c7c7c7;
+    --point-normal:rgb(0, 70, 42); /*이화그린*/
+    --point-light:#38786a;
+    --point-dark:#002419;
+    --button:#e5e5e5;
+}
+
+body{
+    margin:0px;
+    height: 100vh;
+}
+
+h1, h3{
+    margin:0;
+}
+h1{
+    font-size:1.5rem;
+}
+h3{
+    font-size:0.8rem;
+}
+a {
+    text-decoration:none !important
+}
+h1 a[href]{
+    color: rgb(0, 70, 42);
+}
+ul{
+    list-style:none;
+    padding-left:0px;
+}
+.container{
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(250, 250, 250);
+}
+
+header{
+    display:flex;
+    flex-direction: row;
+    border-bottom: 0.5px solid rgb(155, 146, 146);
+    padding:5px 10px;
+}
+
+.header-group{
+    flex-grow: 0;
+}
+
+#header-title{
+    flex-grow:1;
+    flex-shrink: 0;
+}
+
+#header-btn-group, #search-form{
+    align-items: center;
+    display:flex;
+}
+
+#header-btn-group i:hover{
+    color:#38786a;
+}
+
+#search, #log-out{
+    padding: 8px 10px;
+}
+
+#search-form{
+    display: none;
+}
+
+#search-form.active{
+    display:flex;
+}
+
+.ok-btn{
+    background-color:#e5e5e5;
+    padding: 2px;
+    margin-left: 5px;
+    border-radius: 4px;
+}
+
+.ok-btn:hover{
+    cursor: pointer;
+    background-color:#38786a;
+    color:white;
+}
+
+.middle{
+    display:flex;
+    height:100vh;
+}
+
+.middle-category{
+    flex-grow: 0;
+}
+
+.cate-gory{
+    border-right:1px solid grey;
+    flex-basis:150px;
+    flex-shrink: 0;
+    padding: 10px;
+    height:50%;
+    text-align: center;
+    z-index :1;
+    background-color:whitesmoke;
+    left :0;
+    position:fixed;;
+    align-items: center;
+    min-width: 103px;
+}
+
+.btn-plus a, .add-nav-btn {
+    padding: 15px;
+    margin-top: 7px;
+    text-decoration: none;
+    display: block;
+    color: black;
+    margin-top : 14px;
+    background-color:#e5e5e5;
+  }
+
+.btn-plus a:hover, .add-nav-btn:hover {
+    cursor: pointer;
+    background-color:rgb(0, 70, 42);
+    color:white;
+}
+
+.add-nav-btn{
+    border: none;
+}
+
+#main-container{
+    margin-left:120px;
+    flex-grow:1;
+    column-width: 250px;
+    padding-top: 20px;
+}
+
+.todo-box{
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background-color: var(--background-normal);
+    margin: 0 20 1em 20;
+    padding: 10px;
+    border: 1px solid var(--background-dark);
+    border-radius: 8px;
+}
+
+.box-name{
+}
+
+.box-name a{
+    color:whitesmoke;
+    background-color: var(--point-light);
+    display: block;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.box-name a:hover{
+    background-color: var(--point-normal);
+}
+
+.list{
+    margin-left:10px;
+}
+
+.no-items{
+    color:grey;
+}
+
+.btn-delete{
+    border-radius: 20px;
+    border:none;
+    padding: 0px;
+    background-color: var(--background-normal);
+}
+
+.btn-delete i{
+    color: var(--background-dark);
+}
+
+.btn-delete i:hover{
+    color: var(--point-normal);
+}
+
+#add-todo{
+    right:10%;
+    bottom: 10%;
+    border-radius: 30px;
+    padding: 20px;
+    color: white;
+    background-color: var(--point-light);
+    border: none;
+    position: fixed;
+}
+
+#add-todo:hover{
+    background-color: var(--point-normal);
+}
+
+.add-container{
+    display:none;
+    padding: 30px 20px;
+    height:100px;
+    background-color: var(--background-normal);
+    border: 1.5px solid var(--background-dark);
+    border-radius: 4px;
+    position: absolute;
+    top:50%;
+    left:30%;
+}
+
+.add-container.active{
+    display:flex;
+}
+
+.category-list{
+    display:none;
+}
+
+/*반응형*/
+@media screen and (max-width:768px) {
+    
+}
+
+/*Category.js */
+input[type=text]{
+    width: 100px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    font-size: 12px;
+    background-color: white;
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 10px 10px 10px 10px;
+    transition: width 0.4s ease-in-out;
+}
+
+button[type=submit]{
+    text-align: center;
+    padding:4px 5px;
+    cursor: pointer;
+    margin-left: 5px;
+}

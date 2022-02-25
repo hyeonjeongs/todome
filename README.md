@@ -3,6 +3,11 @@
 
 ## ✨할일많조팀
 
+## 프로젝트의 목적
+
+> *한 학기동안 배운 html, css, js 내용들을 최대한 이용할 수 있는 주제로 todolist 설계가 가장 적합하다고 판단하여 프로젝트 주제를 todolist 설계로 결정하고, 이를 바닐라 자바스크립트로 구현하는 것을 목표로 함. 기존의 단순한 todo list의 나열에서 한 단계 더 발전시켜 카테고리형 todolist로 구현 사항을 확장시킴.*
+
+
 ## About project
 1. 카테고리별로 나눠서 일정을 관리할 수 있도록 구성
 2. Html, Css, Javascript를 통해 프로젝트 진행
@@ -55,3 +60,27 @@
 2. 완료 (체크 표시 한 경우)
     - 일정 3개 이하 → 회색으로 완료인 것 표시
     - 일정 4개 이상 → 토글로 숨겨놓기
+
+## 1.시작페이지
+![Untitled](https://user-images.githubusercontent.com/81394850/155752452-35f8e851-7668-4d11-bbab-52f6e5452869.gif)
+
+## 2.로그인페이지
+![Untitled](https://user-images.githubusercontent.com/81394850/155752714-c4e469ae-1b07-49b5-9520-7334841c68e0.gif)
+
+## 3.검색폼
+![Untitled](https://user-images.githubusercontent.com/81394850/155752846-922a0bf3-da27-4371-917f-a03d047106f6.gif)
+
+## 4.검색결과
+![Untitled](https://user-images.githubusercontent.com/81394850/155753003-20146cf5-b29e-486e-9f4d-ab84f2cfd000.gif)
+
+## 5.카테고리 
+* 카테고리 추가
+![3](https://user-images.githubusercontent.com/81394850/155753299-545cccf4-6da2-438f-8077-59e81a58e589.gif)
+
+* 카테고리 삭제
+![4](https://user-images.githubusercontent.com/81394850/155753412-5df109d4-d190-49da-ad81-be261a4ba0f2.gif)
+
+* 선택한 카테고리만 보이기
+![1](https://user-images.githubusercontent.com/81394850/155753490-04cd95cb-e997-486d-885a-6af51c0b9d93.gif)
+
+

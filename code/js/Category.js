@@ -46,13 +46,10 @@ function add_button(e) { //+,X 버튼생성
             todo_box[i].style.display = "block";
         }
 
-<<<<<<< HEAD
-        plus_button.addEventListener('click', function () { plus_cg(add_nav_btn) });//+버튼 눌렀을떄 입력하도록
-        back_button.addEventListener('click', function () { back_cg(add_nav_btn, back_button, plus_button) });//back버튼 누르면
-=======
+
         plus_button.addEventListener('click', function () { plus_cg(add_nav_btn) });                            //+버튼 눌렀을떄 입력하도록
         back_button.addEventListener('click', function () { back_cg(add_nav_btn, back_button, plus_button) });  //back버튼 누르면
->>>>>>> integrated-branch
+
 
 
     }
@@ -90,10 +87,7 @@ function showNothing() {
     console.log(allToDoList);
     for (let index = 0; index < allToDoList.length; index++) {
         if (allToDoList[index].childElementCount === 0) {
-<<<<<<< HEAD
-=======
             //console.log(allToDoList[index].childElementCount);
->>>>>>> integrated-branch
             allToDoList[index].nextElementSibling.classList.add('list-active');
         } else {
             allToDoList[index].nextElementSibling.classList.remove('list-active');
@@ -114,12 +108,7 @@ function add_cg() {// 추가 클릭시 카테고리 추가
         makeButtonInToCategoryList(cg_value.elements[0].value);
         showNothing()
 
-<<<<<<< HEAD
-        li.innerHTML = `<a href = '#' class='bt'>${cg_value.elements[0].value}<button class="cg-remove">
-        <i class='fas fa-times-circle' id='rv-em'></i></button></a>`;
-=======
         li.innerHTML = `<a href = '#' class='bt'>${cg_value.elements[0].value}<button class="cg-remove"><i class='fas fa-times-circle' id='rv-em'></i></button></a>`;
->>>>>>> integrated-branch
         a_dd.appendChild(li);
         li.setAttribute("class", "btn-plus")
         li.setAttribute("id", btn_plus.length);
@@ -141,11 +130,8 @@ function add_cg() {// 추가 클릭시 카테고리 추가
 
 
 
-<<<<<<< HEAD
-function cg_click(e) {
-=======
+
 function cg_click(e) { //edit 클릭시
->>>>>>> integrated-branch
     if (e.target.id == 'rv-em') { //카테고리 x버튼 클릭하는 경우
         let cg_remove = confirm("카테고리를 삭제하시겠습니까?");
         if (cg_remove) {
@@ -156,11 +142,7 @@ function cg_click(e) { //edit 클릭시
             let todo_box = document.querySelectorAll(".todo-box");
             let input_box = document.querySelectorAll(".category-list-button");
 
-<<<<<<< HEAD
-            parentnode.removeChild(remove);
-            todo_box[rv_id].parentNode.removeChild(todo_box[rv_id]);
-            input_box[rv_id].parentNode.removeChild(input_box[rv_id]);
-=======
+
 
 
             parentnode.removeChild(remove);
@@ -169,22 +151,16 @@ function cg_click(e) { //edit 클릭시
 
 
 
->>>>>>> integrated-branch
         }
         else {
             console.log("Not delete")
         }
-<<<<<<< HEAD
-    } else if (e.target.className == 'bt') {
-        cg_box(e.target.parentNode.id);
 
-=======
     } else if (e.target.className == 'bt') {//카테고리 클릭하는 경우(ALL 제외)  
         cg_box(e.target.parentNode.id);
 
         //x버튼 없을때만 카테고리 볼 수 있도록 설정
 
->>>>>>> integrated-branch
     }
 }
 

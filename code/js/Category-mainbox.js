@@ -1,11 +1,8 @@
 const mainContainer = document.querySelector("#main-container");
 const CategoryList = document.querySelector(".category-list");
 
-<<<<<<< HEAD
-export function makeToDoBox(categoryName) { //메인 박스에 들어갈 투두박스를 만드는 함수
-=======
+
 export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두박스를 만드는 함수
->>>>>>> integrated-branch
     const divToDoBox = document.createElement("div");
     divToDoBox.className = "todo-box";
     divToDoBox.classList.add(categoryName); //카테고리 이름을 클래스에 추가해서 찾는 방식을 제안함다.
@@ -39,11 +36,8 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
     spanMore.innerText = " 더보기";
     divMore.appendChild(iToggle);
     divMore.appendChild(spanMore);
-<<<<<<< HEAD
-    divMore.addEventListener('click', () => {
-=======
+
     divMore.addEventListener('click', ()=>{
->>>>>>> integrated-branch
         moreClickHandler(divMore);
     })
     ulListFinished.prepend(divMore);
@@ -57,17 +51,6 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
         let bt = document.getElementsByClassName("bt");
         let bu_plus = document.querySelector(".bu-plus");
 
-<<<<<<< HEAD
-        if (!bu_plus.classList.contains('show')) {
-            for (let i = 0; i < todoBox.length; i++) {
-                todoBox[i].style.display = "none";
-            }
-            divBoxName.parentNode.style.display = "block";
-
-            for (let i = 0; i < bt.length; i++) {//카테고리 선택시 color 변경
-                bt[i].classList.remove('color');
-                if (bt[i].innerText == categoryName) {
-=======
         if(!bu_plus.classList.contains('show')) {
             for(let i=0; i<todoBox.length; i++) {
                 todoBox[i].style.display = "none";
@@ -77,32 +60,19 @@ export function makeToDoBox(categoryName){ //메인 박스에 들어갈 투두�
             for(let i=0;i<bt.length;i++){//카테고리 선택시 color 변경
                 bt[i].classList.remove('color');
                 if(bt[i].innerText == categoryName) {
->>>>>>> integrated-branch
                     bt[i].classList.add('color');
                 }
             }
         }
 
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> integrated-branch
     });
 
 
     mainContainer.appendChild(divToDoBox);
 }
 
-<<<<<<< HEAD
-export function makeButtonInToCategoryList(categoryName) {
-    const button = document.createElement("button");
-    let btn_plus = document.querySelectorAll(".btn-plus");
-    button.id = btn_plus.length - 1;
-    button.className = "category-list-button";
-    button.innerText = categoryName;
-    button.onclick = function () {
-=======
+
 export function makeButtonInToCategoryList(categoryName){
     const button = document.createElement("button");
     let btn_plus = document.querySelectorAll(".btn-plus");
@@ -110,27 +80,12 @@ export function makeButtonInToCategoryList(categoryName){
     button.className = "category-list-button";
     button.innerText = categoryName;
     button.onclick = function(){
->>>>>>> integrated-branch
         selectCategory(categoryName);
     }
     CategoryList.appendChild(button);
 }
 
-<<<<<<< HEAD
-function moreClickHandler(target) {
-    if (target.firstElementChild.className === "fas fa-caret-right") {
-        target.firstElementChild.className = "fas fa-caret-down";
-        const finishedElement = target.parentElement;
-        const childcount = finishedElement.childElementCount;
-        for (let k = 1; k < childcount; k++) {
-            finishedElement.children[k].classList.remove("list-finished-hide");
-        }
-    } else if (target.firstElementChild.className === "fas fa-caret-down") {
-        target.firstElementChild.className = "fas fa-caret-right";
-        const finishedElement = target.parentElement;
-        const childcount = finishedElement.childElementCount;
-        for (let k = 1; k < childcount; k++) {
-=======
+
 function moreClickHandler(target){
     if(target.firstElementChild.className === "fas fa-caret-right"){
         target.firstElementChild.className = "fas fa-caret-down";
@@ -144,7 +99,6 @@ function moreClickHandler(target){
         const finishedElement = target.parentElement;
         const childcount = finishedElement.childElementCount;
         for(let k=1; k<childcount; k++){
->>>>>>> integrated-branch
             finishedElement.children[k].classList.add("list-finished-hide");
         }
     }
